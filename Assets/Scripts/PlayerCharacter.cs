@@ -31,9 +31,11 @@ public float maxSpeed = 1f;
         if (Input.GetKey(KeyCode.A))
             transform.position += -Vector3.right * maxSpeed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
             maxSpeed = maxSpeed * 2f;
 
+       if (Input.GetKeyUp(KeyCode.LeftShift))
+            maxSpeed = 2f;
         
             
     }
