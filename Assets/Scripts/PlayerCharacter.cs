@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,13 @@ public float maxSpeed = 1f;
     // Update is called once per frame
     void Update()
     {
+    // Run (GetKeyDown and GetKeyUp)
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            maxSpeed = maxSpeed * 2f;
+
+       if (Input.GetKeyUp(KeyCode.LeftShift))
+            maxSpeed = 2f;
+
     // Player movement WASD:
         if (Input.GetKey(KeyCode.W))
             transform.position += Vector3.up * maxSpeed * Time.deltaTime;
@@ -31,11 +39,6 @@ public float maxSpeed = 1f;
         if (Input.GetKey(KeyCode.A))
             transform.position += -Vector3.right * maxSpeed * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            maxSpeed = maxSpeed * 2f;
-
-       if (Input.GetKeyUp(KeyCode.LeftShift))
-            maxSpeed = 2f;
         
             
     }
