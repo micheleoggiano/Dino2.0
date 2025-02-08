@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 636287519}
   - component: {fileID: 636287518}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,7 +373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973748ef58d6423459bc633479a928d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2
+  maxSpeed: 6
+  direction: {x: 0, y: 0}
 --- !u!50 &636287519
 Rigidbody2D:
   serializedVersion: 4
