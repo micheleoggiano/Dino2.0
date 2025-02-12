@@ -42,24 +42,26 @@ public class PlayerCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    // Corsa e Sistema di Movimento
+
     // Run (GetKeyDown and GetKeyUp)
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            maxSpeed = maxSpeed * 2f;
+       // if (Input.GetKeyDown(KeyCode.LeftShift))
+       //     maxSpeed = maxSpeed * 2f;
 
-       if (Input.GetKeyUp(KeyCode.LeftShift))
-            maxSpeed = 6f;
+       //if (Input.GetKeyUp(KeyCode.LeftShift))
+       //     maxSpeed = 6f;
 
-        // Player Movement WASD con GetAxis:
+       // // Player Movement WASD con GetAxis:
 
-        float x;
-        float y;
+       // float x;
+       // float y;
 
-        x = Input.GetAxis("Horizontal");
-        y = Input.GetAxis("Vertical");
+       // x = Input.GetAxis("Horizontal");
+       // y = Input.GetAxis("Vertical");
 
-        direction = new Vector2(x, y);
+       // direction = new Vector2(x, y);
 
-        transform.position += maxSpeed * Time.deltaTime * (Vector3)direction;
+       // transform.position += maxSpeed * Time.deltaTime * (Vector3)direction;
 
         // Capacità di salto:
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
