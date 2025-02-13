@@ -18,4 +18,9 @@ public class Obstacle : MonoBehaviour
     {
         transform.position += Vector3.left * Time.deltaTime * speed;    // Movimento
     }
+
+    private void OnBecameInvisible()      // Fuori dalla camera, gli ostacoli vengono distrutti
+    {
+        Destroy(gameObject);
+    }
 }

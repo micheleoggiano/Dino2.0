@@ -23,11 +23,10 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         PhaseData phase = phases[index];
-
-        if (Time.time >= phase.timeThreshold) 
+        if (Time.time >= phase.timeThreshold && index < phases.Length) 
         {
             index++;
-            phase = phases[index];
+            phase = phases [index];
         }
 
         if (Time.time - timeStamp >= cooldown)

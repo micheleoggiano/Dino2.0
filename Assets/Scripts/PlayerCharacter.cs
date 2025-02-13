@@ -42,6 +42,7 @@ public class PlayerCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
     // Corsa e Sistema di Movimento
 
     // Run (GetKeyDown and GetKeyUp)
